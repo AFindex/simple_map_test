@@ -1,0 +1,84 @@
+/* 高对比度简洁样式 */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #000000;
+  color: #ffffff;
+  line-height: 1.4;
+}
+
+#root {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* 按钮样式 */
+button {
+  background-color: #ffffff;
+  color: #000000;
+  border: 2px solid #ffffff;
+  padding: 8px 16px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: all 0.2s ease;
+}
+
+button:hover {
+  background-color: #000000;
+  color: #ffffff;
+}
+
+button:disabled {
+  background-color: #666666;
+  color: #cccccc;
+  cursor: not-allowed;
+}
+
+/* 输入框样式 */
+input, select, textarea {
+  background-color: #000000;
+  color: #ffffff;
+  border: 2px solid #ffffff;
+  padding: 8px;
+  font-size: 14px;
+}
+
+input:focus, select:focus, textarea:focus {
+  outline: none;
+  border-color: #ffff00;
+}
+
+/* 标签样式 */
+label {
+  font-weight: bold;
+  margin-bottom: 4px;
+  display: block;
+}
+
+/* 容器样式 */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.panel {
+  background-color: #111111;
+  border: 2px solid #ffffff;
+  padding: 16px;
+  margin-bottom: 16px;
+}
+
+.panel-title {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 12px;
+  border-bottom: 1px solid #ffffff;
+  padding-bottom: 8px;
+}

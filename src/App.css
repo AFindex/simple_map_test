@@ -1,0 +1,294 @@
+.app {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.app-header {
+  background-color: #111111;
+  border-bottom: 2px solid #ffffff;
+  padding: 16px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.app-header h1 {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.header-controls {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.current-map-name {
+  font-weight: bold;
+  color: #ffff00;
+}
+
+.app-main {
+  flex: 1;
+  padding: 20px;
+  position: relative;
+}
+
+.map-workspace {
+  display: flex;
+  gap: 20px;
+  height: calc(100vh - 120px);
+}
+
+.map-container {
+  flex: 1;
+  overflow: auto;
+  border: 2px solid #ffffff;
+  background-color: #111111;
+  display: flex;
+  flex-direction: column;
+}
+
+.editor-container {
+  width: 300px;
+  flex-shrink: 0;
+}
+
+.welcome-screen {
+  text-align: center;
+  padding: 60px 20px;
+}
+
+.welcome-screen h2 {
+  font-size: 28px;
+  margin-bottom: 16px;
+}
+
+.welcome-screen p {
+  font-size: 16px;
+  color: #cccccc;
+}
+
+/* 工具栏样式 */
+.toolbar {
+  background-color: #000000;
+  border-bottom: 1px solid #ffffff;
+  padding: 12px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  align-items: center;
+}
+
+.toolbar-section {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.toolbar-section label {
+  font-size: 12px;
+  font-weight: bold;
+  margin: 0;
+}
+
+.map-info-section {
+  background-color: #222222;
+  border: 1px solid #ffffff;
+  padding: 4px 8px;
+  border-radius: 2px;
+}
+
+.map-info-text {
+  font-size: 12px;
+  font-weight: bold;
+  color: #ffff00;
+}
+
+.toolbar select {
+  padding: 4px 8px;
+  font-size: 12px;
+  background-color: #000000;
+  color: #ffffff;
+  border: 2px solid #ffffff;
+}
+
+.toolbar button {
+  padding: 4px 8px;
+  font-size: 12px;
+  background-color: #ffffff;
+  color: #000000;
+  border: 2px solid #ffffff;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.toolbar button:hover {
+  background-color: #000000;
+  color: #ffffff;
+}
+
+.quick-colors {
+  display: flex;
+  gap: 2px;
+}
+
+.quick-color {
+  width: 20px;
+  height: 20px;
+  border: 1px solid #ffffff;
+  cursor: pointer;
+  transition: border-width 0.1s ease;
+}
+
+.quick-color:hover {
+  border-width: 2px;
+}
+
+.quick-color.active {
+  border-width: 3px;
+  border-color: #ffff00;
+}
+
+/* 模式按钮样式 */
+.mode-buttons {
+  display: flex;
+  gap: 4px;
+}
+
+.mode-btn {
+  background-color: #333333;
+  color: #ffffff;
+  border: 2px solid #666666;
+  padding: 6px 12px;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 12px;
+  transition: all 0.2s ease;
+}
+
+.mode-btn:hover {
+  background-color: #555555;
+  border-color: #ffffff;
+}
+
+.mode-btn.active {
+  background-color: #ffff00;
+  color: #000000;
+  border-color: #ffff00;
+}
+
+.mode-btn.active:hover {
+  background-color: #ffff00;
+  color: #000000;
+  border-color: #ffff00;
+}
+
+/* 拾色器按钮样式 */
+.picker-btn {
+  background-color: #00ffff;
+  color: #000000;
+  border: 2px solid #00ffff;
+  padding: 6px 12px;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 12px;
+  transition: all 0.2s ease;
+}
+
+.picker-btn:hover {
+  background-color: #000000;
+  color: #00ffff;
+}
+
+.picker-btn.active {
+  background-color: #ff8800;
+  color: #ffffff;
+  border-color: #ff8800;
+  animation: picker-pulse 1s infinite;
+}
+
+.picker-btn.active:hover {
+  background-color: #ff8800;
+  color: #ffffff;
+  border-color: #ff8800;
+}
+
+@keyframes picker-pulse {
+  0%, 100% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0.7;
+  }
+}
+
+/* 预设面板按钮样式 */
+.preset-panel-btn {
+  background-color: #800080;
+  color: #ffffff;
+  border: 2px solid #800080;
+  padding: 6px 12px;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 12px;
+  transition: all 0.2s ease;
+}
+
+.preset-panel-btn:hover {
+  background-color: #ffffff;
+  color: #800080;
+}
+
+.preset-panel-btn.active {
+  background-color: #ff8800;
+  color: #ffffff;
+  border-color: #ff8800;
+}
+
+.preset-panel-btn.active:hover {
+  background-color: #ff8800;
+  color: #ffffff;
+  border-color: #ff8800;
+}
+
+/* 预设面板样式 */
+.preset-panel {
+  flex-shrink: 0;
+}
+
+/* 显示选项样式 */
+.display-options {
+  display: flex;
+  gap: 4px;
+}
+
+.display-option-btn {
+  background-color: #333333;
+  color: #ffffff;
+  border: 2px solid #666666;
+  padding: 4px 8px;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 11px;
+  transition: all 0.2s ease;
+}
+
+.display-option-btn:hover {
+  background-color: #555555;
+  border-color: #ffffff;
+}
+
+.display-option-btn.active {
+  background-color: #00ff00;
+  color: #000000;
+  border-color: #00ff00;
+}
+
+.display-option-btn.active:hover {
+  background-color: #00ff00;
+  color: #000000;
+  border-color: #00ff00;
+}
